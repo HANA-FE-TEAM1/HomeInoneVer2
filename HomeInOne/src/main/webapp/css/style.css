@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: "IBMPlexSansKR-Regular";
+  background-color: #effaff;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 90%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+.header-inner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.header-inner > img {
+  height: 50px;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+  margin: 1%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 28.33333333%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.white-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: calc(100%-20px);
+  margin-bottom: 1%;
+  box-shadow: 0 2rem 2rem -2rem hsl(200 50% 20% / 40%);
+}
+
+.white-card-slider {
+  background-color: #f9fffe;
+  border-radius: 10px;
+  width: calc(100%-20px);
+  margin-bottom: 1%;
+  height: 100%;
+  box-shadow: 0 2rem 2rem -2rem hsl(200 50% 20% / 40%);
+}
+.white-card-header {
+  padding: 22px 30px;
+}
+.main-title-slider > p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.white-card-body {
+  padding: 5px 30px 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.carousel-object {
+  height: 30vh;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#logo-image {
+  transition: opacity 0.5s;
+}
+
+#hovered-logo-image {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.header-inner:hover > #hovered-logo-image {
+  opacity: 1;
+}
+.header-inner:hover > #logo-image {
+  opacity: 0;
+}
+
+embed {
+  border-radius: 15px;
+}
+
+h1, input::-webkit-input-placeholder, button {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ h1 {
+  font-family: "IBMPlexSansKR-Regular";
+  text-align: center;
+  vertical-align: center;
+   height: 100px;
+   width: 100%;
+   font-size: 18px;
+   background: #18aa8d;
+   color: white;
+   line-height: 150%;
+   border-radius: 3px 3px 0 0;
+   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+ }
+ 
+ form {
+   box-sizing: border-box;
+   
+   width: 260px;
+   margin: 150px auto 0;
+   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+   padding-bottom: 40px;
+   border-radius: 3px;
+   font-family: "IBMPlexSansKR-Regular";
+ }
+ 
+ form h1 {
+   box-sizing: border-box;
+   padding: 20px;
+   font-family: "IBMPlexSansKR-Regular";
+ }
+ 
+ input {
+  font-family: "IBMPlexSansKR-Regular";
+   margin: 40px 25px;
+   width: 200px;
+   display: block;
+   border: none;
+   padding: 10px 0;
+   border-bottom: solid 1px #1abc9c;
+   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+   background-position: -200px 0;
+   background-size: 200px 100%;
+   background-repeat: no-repeat;
+   color: #0e6252;
+ }
+ input:focus, input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+ }
+ input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+  color: #1abc9c;
+  font-size: 11px;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  visibility: visible !important;
+ }
+ 
+ button {
+   border: none;
+   background: #1abc9c;
+   cursor: pointer;
+   border-radius: 3px;
+   padding: 6px;
+   width: 200px;
+   color: white;
+   margin-left: 25px;
+   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+   font-family: "IBMPlexSansKR-Regular";
+ }
+ 
+ button:hover {
+   -webkit-transform: translateY(-3px);
+   -ms-transform: translateY(-3px);
+   transform: translateY(-3px);
+   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .container {
+  width: 90%;
+
+}

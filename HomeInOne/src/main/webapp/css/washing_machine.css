@@ -1,0 +1,316 @@
+@font-face {
+  font-family: Digital-7;
+  src: url(../font/digital-7.regular.ttf);
+}
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  background-color: white;
+}
+body::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 10px;
+   background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #00C5A3;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background-color: #F5F5F5;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*교차축*/
+  justify-content: center; /*주축*/
+  background-color: #DAF1EC;
+  width: 430px;
+  height: 932px;
+  font-family: "IBMPlexSansKR-Regular";
+  width: 100%;
+}
+.frame {
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*교차축*/
+  justify-content: start; /*주축*/
+  width: 100%;
+  height: 100%;
+}
+.app-name {
+  margin-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*교차축*/
+  justify-content: center; /*주축*/  
+}
+.app-name > span {
+  font-size: 30px;
+}
+/*메인기능 모션 -- 세탁기 S*/
+#countdown {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#countdown div {
+  margin: 0 10px;
+}
+
+/*메이기능 모션 --세탁기 E*/
+
+/*냉방 S*/
+#coolingText {
+  font-size: 35px;
+  font-weight: 200;
+  border-bottom: 1px solid black; /* 밑줄처럼 보이는 선 추가 */
+  padding-bottom: 5px; /* 선과 텍스트 사이의 간격 조절 */
+  line-height: 1; /* 텍스트의 높이 조절 */
+}
+
+.section2 {
+  width: 430px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+/*냉방 E*/
+.sub1,
+.sub2,
+.sub3,
+.sub4 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.section3 {
+  width: 290px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*세부기능 모드선택 -- S*/
+.modeselect {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.modeselect-text {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  padding-bottom: 5px; /* 선과 텍스트 사이의 간격 조절 */
+  line-height: 1;
+}
+.modeselect > div > button {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: #daf1ec;
+  border: 1px solid #daf1ec;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.windselect {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.windselect-text {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  padding-bottom: 5px; /* 선과 텍스트 사이의 간격 조절 */
+  line-height: 1;
+}
+.windselect > div > button {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: #daf1ec;
+  border: 1px solid #daf1ec;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.windamount-text {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  padding-bottom: 5px; /* 선과 텍스트 사이의 간격 조절 */
+  line-height: 1.5;
+}
+
+.timer-text {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  padding-bottom: 5px; /* 선과 텍스트 사이의 간격 조절 */
+  line-height: 1;
+}
+.sub4 > select {
+  width: 210px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #daf1ec;
+  font-size: 15px;
+  color: #333;
+}
+.sub4 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+select {
+  position: absolute;
+  left: 115px;
+}
+/* CLOCK */
+
+/*세탁시작 버튼*/
+.checkbox-wrapper-16 *,
+.checkbox-wrapper-16 *:after,
+.checkbox-wrapper-16 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-16 .checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+  border-color: #2260ff;
+  background-color: rgb(84, 84, 255);
+  content: '세탁 중지';
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: white;
+  content: '세탁 중지';
+}
+.checkbox-wrapper-16 .checkbox-input:hover + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #a1b4ed;
+}
+.checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  width: 20rem;
+  min-height: 3rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #f3f3f3;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-wrapper-16 .checkbox-tile:hover {
+  border-color: #2260ff;
+}
+.checkbox-wrapper-16 .checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-wrapper-16 .checkbox-icon {
+  transition: 0.2s ease;
+  color: #494949;
+}
+.checkbox-wrapper-16 .checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-wrapper-16 .checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+}
+
+/*세탁 버튼, 탈수 버튼*/
+.button-clicked {
+  background-color: #00c5a3 !important; /* 원하는 색상 코드로 변경 */
+  color: #333; /* 원하는 텍스트 색상 코드로 변경 */
+  transition: 1s ease;
+}
+
+.button-unclicked {
+  transition: 1s ease;
+}
+/*세탁 버튼, 탈수 버튼 e*/
+
+#countdown {
+  margin-left: 5px;
+  padding: 25px;
+  max-width: 300px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#hours,
+#minutes,
+#seconds {
+  font-family: Digital-7, "sans-serif";
+  font-size: 80px;
+  text-shadow: 0px 0px 5px #cdc5c5;
+  color: #3b3939;
+}
+#countdown .colon {
+  font-size: 45px;
+  margin: 0%;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/refrigerator.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/switch.css">
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+    <title>냉장고</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="app-name">
+        <span>냉장고</span>
+      </div>
+      <div class="frame">
+        <section class="section section2">
+          <span id="coolingText">냉장 온도</span>
+        </section>
+        <section class="section section3">
+        <div class="switch-container-1">
+          <div class="switch demo4">
+            <input onclick="refridgeOn()" id="refridge-power" type="checkbox"/>
+            <label><i class="icon-off"></i></label>
+          </div>
+        </div>
+        <div class="center">
+          <div class="slider">
+            <div class="knob">
+              <div class="rotator">
+                <div class="text">0°C</div>
+              </div>
+              <div class="pointer">
+                <span class="material-icons"> play_arrow </span>
+              </div>
+            </div>
+            <svg class="progress-bar" width="300" height="300">
+              <circle
+                class="progress-circle"
+                cx="150"
+                cy="150"
+                r="140"></circle>
+              <circle
+                id="circle2"
+                class="progress-circle"
+                cx="150"
+                cy="150"
+                r="140"
+                style="
+                  stroke: url(#gradient);
+                  stroke-width: 16px;
+                  stroke-linecap: round;
+                "></circle>
+              <defs>
+                <linearGradient
+                  id="gradient"
+                  x1="10%"
+                  y1="10%"
+                  x2="100%"
+                  y2="100%">
+                  <stop offset="0%" style="stop-color: rgb(118, 170, 238)" />
+                  <stop offset="50%" style="stop-color: rgb(8, 175, 241)" />
+                  <stop offset="100%" style="stop-color: rgb(30, 5, 219)" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="section section4">
+        <div class="sub1">
+          <div class="routine_box">
+            <div class="routineBoxWrapper1">
+              <p id="routineTitle">급속 냉동</p>
+            </div>
+            <div class="routineBoxWrapper2">
+              <div class="toggle-button toggle-button1"></div>
+              <div id="btnWrap"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub2">
+          <div class="routine_box">
+            <div class="routineBoxWrapper1">
+              <p id="routineTitle">저소음모드</p>
+            </div>
+            <div class="routineBoxWrapper2">
+              <div class="toggle-button toggle-button2"></div>
+              <div id="btnWrap"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub3">
+          <div class="routine_box">
+            <div class="routineBoxWrapper1">
+              <p id="routineTitle">김치아삭 모드</p>
+            </div>
+            <div class="routineBoxWrapper2">
+              <div class="toggle-button toggle-button3"></div>
+              <div id="btnWrap"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sub4">
+          <div class="routine_box">
+            <div class="routineBoxWrapper1">
+              <p id="routineTitle">잠금</p>
+            </div>
+            <div class="routineBoxWrapper2">
+              <button id="lockButton" class="lock-button"></button>
+              <!-- 자물쇠 모양 버튼 추가 -->
+              <div id="btnWrap"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+    <script src="javascript/refrigerator.js">
+    </script><script src="javascript/switchRe.js"></script>
+  </body>
+</html>
